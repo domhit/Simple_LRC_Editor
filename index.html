@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>LRC Editor & Karaoke</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>🎵 Selfhosted LRC Editor</h1>
+  <button id="toggleTheme">🌙 / ☀️ Dark/Light Mode</button>
+  <p><strong>Hinweis:</strong> Zeitstempel per <em>Mausklick</em> oder <em>Tastendruck (Enter/Space)</em> setzen. 
+  Doppelklick auf Text = Bearbeiten. Aktuelle Zeile wird hervorgehoben & Karaoke Modus ist verfügbar.</p>
+
+  <h2>1. Song laden</h2>
+  <label>Audiodatei: <input type="file" id="audioFile"></label>
+  <audio id="player" controls></audio>
+
+  <h2>2. Metadaten</h2>
+  <input type="text" id="title" placeholder="Titel (ti)">
+  <input type="text" id="artist" placeholder="Interpret (ar)">
+  <input type="text" id="album" placeholder="Album (al)">
+  <button id="applyMetadata">Metadaten übernehmen</button>
+
+  <h2>3. Lyrics</h2>
+  <textarea id="lyricsInput" placeholder="Songtext hier einfügen..."></textarea>
+  <button id="loadLyrics">Lyrics laden</button>
+  <button id="loadLrc">LRC laden</button>
+  <input type="file" id="lrcFile" accept=".lrc" style="display:none;">
+
+  <h2>4. Zeitstempel</h2>
+  <div id="lyrics"></div>
+
+  <h2>5. Export & Karaoke</h2>
+  <button id="exportLrc">LRC exportieren</button>
+  <button id="startKaraoke">Karaoke Modus</button>
+
+  <div id="karaokeView"><div id="karaokeLine">🎤 Karaoke Modus</div></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
+
